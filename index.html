@@ -64,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-TypeScript入门" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/Jin-longwu/2021/03/15/hello-world/" class="article-date">
-  <time datetime="2021-03-15T07:51:33.800Z" itemprop="datePublished">2021-03-15</time>
+    <a href="/Jin-longwu/2020/10/11/TypeScript%E5%85%A5%E9%97%A8/" class="article-date">
+  <time datetime="2020-10-11T13:45:03.000Z" itemprop="datePublished">2020-10-11</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/Jin-longwu/2021/03/15/hello-world/">Hello World</a>
+      <a class="article-title" href="/Jin-longwu/2020/10/11/TypeScript%E5%85%A5%E9%97%A8/">TypeScript入门</a>
     </h1>
   
 
@@ -86,24 +86,556 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="一、-TypeScript-介绍"><a href="#一、-TypeScript-介绍" class="headerlink" title="一、 TypeScript 介绍"></a>一、 TypeScript 介绍</h2><ul>
+<li>Typescript是由微软开发的一款开源的编程语言</li>
+<li>Typescript是Javascript的超集，遵循最新的ES5/ES6规范。TypeScript扩展了Javascript语法</li>
+<li>TypeScript更像后端Java、C#这样的面向对象语言可以让JS开发大型企业应用</li>
+<li>谷歌也在大力支持TypeScript,谷歌的Angular2就是基于 TypeScript语法的</li>
+<li>最新的Vue、React也可以集成Typescript.</li>
+</ul>
+<h2 id="二、TypeScript安装和编译"><a href="#二、TypeScript安装和编译" class="headerlink" title="二、TypeScript安装和编译"></a>二、TypeScript安装和编译</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm i typescript -g</span><br><span class="line">tsc helloworld.ts</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Vscode-TypeScript"><a href="#Vscode-TypeScript" class="headerlink" title="Vscode+TypeScript"></a>Vscode+TypeScript</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tsc --init</span><br><span class="line">&#123;&quot;outDir&quot;: &quot;.&#x2F;js&quot;&#125;</span><br><span class="line">Terminal - Run Task - </span><br><span class="line">tsc: watch - front&#x2F;tsconfig.json</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="三、数据类型"><a href="#三、数据类型" class="headerlink" title="三、数据类型"></a>三、数据类型</h2><h3 id="布尔类型-boolean"><a href="#布尔类型-boolean" class="headerlink" title="布尔类型(boolean)"></a>布尔类型(boolean)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let married: boolean&#x3D;false;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="数字类型-number"><a href="#数字类型-number" class="headerlink" title="数字类型(number)"></a>数字类型(number)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let age: number&#x3D;10;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="字符串类型-string"><a href="#字符串类型-string" class="headerlink" title="字符串类型(string)"></a>字符串类型(string)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let firstname: string&#x3D;&#39;zfpx&#39;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组类型-array"><a href="#数组类型-array" class="headerlink" title="数组类型(array)"></a>数组类型(array)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let arr2: number[]&#x3D;[4,5,6];</span><br><span class="line">let arr3: Array&lt;number&gt;&#x3D;[7,8,9];</span><br></pre></td></tr></table></figure>
+
+<h3 id="元组类型-tuple"><a href="#元组类型-tuple" class="headerlink" title="元组类型(tuple)"></a>元组类型(tuple)</h3><p>是数组类型中的一种</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let fullname: [string,string]&#x3D;[&#39;zhang&#39;,&#39;san&#39;];</span><br></pre></td></tr></table></figure>
+
+<h3 id="枚举类型-enum"><a href="#枚举类型-enum" class="headerlink" title="枚举类型(enum)"></a>枚举类型(enum)</h3><p>事先考虑某一个变量的所有的可能的值，尽量用自然语言中的单词表示它的每一个值<br> 比如性别、月份、星期、颜色、单位、学历</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">js enum Gender&#123; GIRL, BOY &#125; console.log(李雷是$&#123;Gender.BOY&#125;); console.log(韩梅梅是$&#123;Gender.GIRL&#125;);</span><br><span class="line">enum Week&#123; MONDAY&#x3D;1, TUESDAY&#x3D;2 &#125; console.log(今天是星期$&#123;Week.MONDAY&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="任意类型-any"><a href="#任意类型-any" class="headerlink" title="任意类型(any)"></a>任意类型(any)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let root:any&#x3D;document.getElementById(&#39;root&#39;);</span><br><span class="line">root.style.color&#x3D;&#39;red&#39;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="null-和-undefined"><a href="#null-和-undefined" class="headerlink" title="null 和 undefined"></a>null 和 undefined</h3><p>null 和 undefined 是其它类型的子类型，可以赋值给其它类型，如数字类型，此时，赋值后的类型会变成 null 或 undefined</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let x: number;</span><br><span class="line">x &#x3D; 1; &#x2F;&#x2F; 运行正确</span><br><span class="line">x &#x3D; undefined;    &#x2F;&#x2F; 运行错误</span><br><span class="line">x &#x3D; null;    &#x2F;&#x2F; 运行错误</span><br><span class="line">let y: number | null | undefined;</span><br><span class="line">y &#x3D; 1; &#x2F;&#x2F; 运行正确</span><br><span class="line">y &#x3D; undefined;    &#x2F;&#x2F; 运行正确</span><br><span class="line">y &#x3D; null;    &#x2F;&#x2F; 运行正确</span><br></pre></td></tr></table></figure>
+
+<h3 id="void-类型"><a href="#void-类型" class="headerlink" title="void 类型"></a>void 类型</h3><p>void表示没有任何类型，一般用于定义方法的时候方法没有返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function greeting(name:string):void &#123;</span><br><span class="line">    console.log(&#39;hello&#39;,name);</span><br><span class="line">&#125;</span><br><span class="line">greeting(&#39;zfpx&#39;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="never类型"><a href="#never类型" class="headerlink" title="never类型"></a>never类型</h3><p>never是其它类型(null undefined)的子类型，代表不会出现的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let x: never;</span><br><span class="line">x &#x3D; (()&#x3D;&gt;&#123; throw new Error(&#39;exception&#39;)&#125;)();</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、函数"><a href="#四、函数" class="headerlink" title="四、函数"></a>四、函数</h2><h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function hello(name:string):void &#123;</span><br><span class="line">    console.log(&#39;hello&#39;,name);</span><br><span class="line">&#125;</span><br><span class="line">hello(&#39;zfpx&#39;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="没有返回值"><a href="#没有返回值" class="headerlink" title="没有返回值"></a>没有返回值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let hello2 &#x3D; function (name:string):void &#123;</span><br><span class="line">    console.log(&#39;hello2&#39;,name);</span><br><span class="line">&#125;</span><br><span class="line">hello(&#39;zfpx&#39;);</span><br><span class="line">hello2(&#39;zfpx&#39;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="可选参数"><a href="#可选参数" class="headerlink" title="可选参数"></a>可选参数</h3><p>在TS中函数的形参和实参必须一样，不一样就要配置可选参数,而且必须是最后一个参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function print(name:string,age?:number):void &#123;</span><br><span class="line">    console.log(name,age);</span><br><span class="line">&#125;</span><br><span class="line">print(&#39;zfpx&#39;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function ajax(url:string,method:string&#x3D;&#39;GET&#39;) &#123;</span><br><span class="line">    console.log(url,method);</span><br><span class="line">&#125;</span><br><span class="line">ajax(&#39;&#x2F;users&#39;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="剩余参数"><a href="#剩余参数" class="headerlink" title="剩余参数"></a>剩余参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function sum(...numbers:number[]) &#123;</span><br><span class="line">    return numbers.reduce((val,item)&#x3D;&gt;val+&#x3D;item,0);</span><br><span class="line">&#125;</span><br><span class="line">console.log(sum(1,2,3));</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><ul>
+<li>在Java中的重载，指的是两个或者两个以上的同名函数，参数不一样</li>
+<li>在TypeScript中，表现为给同一个函数提供多个函数类型定义</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">let obj: any&#x3D;&#123;&#125;;</span><br><span class="line">function attr(val: string): void;</span><br><span class="line">function attr(val: number): void;</span><br><span class="line">function attr(val:any):void &#123;</span><br><span class="line">  if (typeof val &#x3D;&#x3D;&#x3D; &#39;number&#39;) &#123;</span><br><span class="line">      obj.age&#x3D;val;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">      obj.name&#x3D;val;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">attr(&#39;zfpx&#39;);</span><br><span class="line">attr(9);</span><br><span class="line">attr(true);</span><br><span class="line">console.log(obj);</span><br></pre></td></tr></table></figure>
+
+
+<p>作者：浪里行舟_前端工匠<br>链接：<a target="_blank" rel="noopener" href="https://www.imooc.com/article/276181">https://www.imooc.com/article/276181</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/15/hello-world/" data-id="ckmad9nj9000004ux90c599o0" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/11/TypeScript%E5%85%A5%E9%97%A8/" data-id="ckmadojik0000louxhga65ypr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-为什么Vue中的slot不能应用v-show指令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Jin-longwu/2020/09/18/%E4%B8%BA%E4%BB%80%E4%B9%88Vue%E4%B8%AD%E7%9A%84slot%E4%B8%8D%E8%83%BD%E5%BA%94%E7%94%A8v-show%E6%8C%87%E4%BB%A4/" class="article-date">
+  <time datetime="2020-09-18T02:15:02.000Z" itemprop="datePublished">2020-09-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Jin-longwu/2020/09/18/%E4%B8%BA%E4%BB%80%E4%B9%88Vue%E4%B8%AD%E7%9A%84slot%E4%B8%8D%E8%83%BD%E5%BA%94%E7%94%A8v-show%E6%8C%87%E4%BB%A4/">为什么Vue中的slot不能应用v-show指令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天偶然发现，在Vue中使用插槽slot，是无法通过v-show控制slot的显示的，来看代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(&#39;fade&#39;, &#123;</span><br><span class="line">      props: [&#39;show&#39;],</span><br><span class="line">      template: &#96;</span><br><span class="line">        &lt;transition @before-enter&#x3D;&quot;handleBeforeEnter&quot; @enter&#x3D;&quot;handleEnter&quot;&gt;</span><br><span class="line">          &lt;slot v-show&#x3D;&quot;show&quot;&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">        &lt;&#x2F;transition&gt;</span><br><span class="line">      &#96;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        handleBeforeEnter: function(el) &#123;</span><br><span class="line">          el.style.color &#x3D; &#39;red&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        handleEnter: function(el, done) &#123;</span><br><span class="line">          setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">            el.style.color &#x3D; &#39;green&#39;</span><br><span class="line">            done()</span><br><span class="line">          &#125;, 2000)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>这是随便写的一个封装动画组件，如果在slot标签上使用v-show，程序功能是无法实现的，必须要改成v-if。</p>
+<p>原因是这样的，slot实际上是一个抽象元素，有点类似template，本质上并不是一个元素。而v-show是通过控制元素的display来进行显示隐藏的，slot本质上并不是元素，所以压根也就不会有display 这个css属性。</p>
+<p>所以，slot的显示隐藏，还真得使用v-if。</p>
+<p>Vue的作者在社区内回答过这个问题，所以代码以这个答案为准即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/09/18/%E4%B8%BA%E4%BB%80%E4%B9%88Vue%E4%B8%AD%E7%9A%84slot%E4%B8%8D%E8%83%BD%E5%BA%94%E7%94%A8v-show%E6%8C%87%E4%BB%A4/" data-id="ckmadojip0001loux1b4h6m1c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-小程序搜索功能，云开发搜索，小程序云开发模糊搜索，同时搜索多个字段" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Jin-longwu/2020/06/18/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%BA%91%E5%BC%80%E5%8F%91%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%90%8C%E6%97%B6%E6%90%9C%E7%B4%A2%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5/" class="article-date">
+  <time datetime="2020-06-18T02:55:16.000Z" itemprop="datePublished">2020-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Jin-longwu/2020/06/18/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%BA%91%E5%BC%80%E5%8F%91%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%90%8C%E6%97%B6%E6%90%9C%E7%B4%A2%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5/">小程序搜索功能，云开发搜索，小程序云开发模糊搜索，同时搜索多个字段</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天来给大家讲讲小程序的搜索功能。我这里后台数据库用的是小程序云开发的云数据库。所以我们搜索的时候就要借助云开发来实现。</p>
+<h2 id="一，需求"><a href="#一，需求" class="headerlink" title="一，需求"></a>一，需求</h2><p>比如我这里有如下的一些数据<br><img src="https://img-blog.csdnimg.cn/20210207220734125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>我们想实现如下搜索需求</p>
+<ul>
+<li>1，搜索标题(title)包含‘小石头’的数据</li>
+<li>2，搜索标题(title)或者描述(desc)包含‘小石头’的数据</li>
+<li>3，搜索标题(title)描述(desc)都包含‘小石头’的数据</li>
+</ul>
+<p>我们知道数据库查询的时候有个where语句，但是where语句是查询某个字段全部包含你输入的内容时才可以，所以单纯用where语句来做搜索的话，结果太单一。所以我们今天就来学习下模糊搜索功能的实现。我们以上面三个需求为例，来一个个讲解。</p>
+<h2 id="二，实现原理"><a href="#二，实现原理" class="headerlink" title="二，实现原理"></a>二，实现原理</h2><p>我们做模糊搜索的时候，其实就是查询某个字段里是否包含我们的搜索词。而模糊搜索需要借助RegExp，来看看RegExp是什么。<br><img src="https://img-blog.csdnimg.cn/20210207214411585.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li>再来看看官方示例<br><img src="https://img-blog.csdnimg.cn/2021020721445170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br> 可能看官方示例会有点糊涂，那么我们接下来就结合具体代码来给大家做下讲解。</li>
+</ul>
+<h2 id="三，模糊搜索的代码实现"><a href="#三，模糊搜索的代码实现" class="headerlink" title="三，模糊搜索的代码实现"></a>三，模糊搜索的代码实现</h2><h3 id="3-1，模糊搜索单个字段"><a href="#3-1，模糊搜索单个字段" class="headerlink" title="3-1，模糊搜索单个字段"></a>3-1，模糊搜索单个字段</h3><ul>
+<li>需求：搜索标题(title)包含‘小石头’的数据</li>
+</ul>
+<p>代码如下<br><img src="https://img-blog.csdnimg.cn/20210207215202954.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br> 查询结果如下：<br><img src="https://img-blog.csdnimg.cn/20210207215132308.png" alt="img"><br> 可以看到我们成功的查询到了标题里包含‘小石头的数据’</p>
+<h3 id="3-2，模糊搜索多个字段（满足一个即可）"><a href="#3-2，模糊搜索多个字段（满足一个即可）" class="headerlink" title="3-2，模糊搜索多个字段（满足一个即可）"></a>3-2，模糊搜索多个字段（满足一个即可）</h3><ul>
+<li>需求：搜索标题(title)或者描述(desc)包含‘小石头’的数据</li>
+</ul>
+<p>由于我们要查询多个字段，所以我们这里用到了command高级操作符里的or<br><img src="https://img-blog.csdnimg.cn/20210207215716587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br> 代码如下：<br><img src="https://img-blog.csdnimg.cn/20210207220123112.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br> 查询结果：<br><img src="https://img-blog.csdnimg.cn/20210207220051542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"><br> 我们来分析下这两条数据</p>
+<ul>
+<li>1，标题和描述都包含‘小石头’，符合</li>
+<li>2，虽然标题里没有‘小石头’，但是描述里有，所以也符合。</li>
+<li>3，title和desc里都没有‘小石头’，所以不符合。<br><img src="https://img-blog.csdnimg.cn/20210207220816997.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
+</ul>
+<h3 id="3-3，模糊搜索多个字段（要同时满足）"><a href="#3-3，模糊搜索多个字段（要同时满足）" class="headerlink" title="3-3，模糊搜索多个字段（要同时满足）"></a>3-3，模糊搜索多个字段（要同时满足）</h3><ul>
+<li>需求：搜索标题(title)描述(desc)都包含‘小石头’的数据</li>
+</ul>
+<p>由于我们要查询多个字段，所以我们这里用到了command高级操作符里的and<br><img src="https://img-blog.csdnimg.cn/20210207221006673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>代码如下：<br><img src="https://img-blog.csdnimg.cn/20210207220906802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>查询结果：<br><img src="https://img-blog.csdnimg.cn/20210207220635299.png" alt="img"><br> 我们来分析下这两条数据</p>
+<ul>
+<li>1，标题和描述都包含‘小石头’，符合</li>
+<li>2，虽然desc里没有‘小石头’，但是title里没有，所以也不符合。</li>
+<li>3，title和desc里都没有‘小石头’，所以也不符合。<br><img src="https://img-blog.csdnimg.cn/20210207220746420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpdXNoaV8xOTkw,size_16,color_FFFFFF,t_70" alt="img"></li>
+</ul>
+<h2 id="四，源码"><a href="#四，源码" class="headerlink" title="四，源码"></a>四，源码</h2><p>为例方便大家使用，我把完整的代码贴到这里，后面大家使用时，直接复制这里的代码，略微改造下就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;我这里简单起见就把搜索词写死，正常应该用户输入的</span><br><span class="line">let searchKey &#x3D; &#39;小石头&#39;</span><br><span class="line">let db &#x3D; wx.cloud.database()</span><br><span class="line">let _ &#x3D; db.command</span><br><span class="line"></span><br><span class="line">db.collection(&#39;news&#39;)</span><br><span class="line">  .where(_.or([</span><br><span class="line">    &#123;&#x2F;&#x2F;标题</span><br><span class="line">      title: db.RegExp(&#123; &#x2F;&#x2F;使用正则查询，实现对搜索的模糊查询</span><br><span class="line">        regexp: searchKey,</span><br><span class="line">        options: &#39;i&#39;, &#x2F;&#x2F;大小写不区分</span><br><span class="line">      &#125;),</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;&#x2F;&#x2F;描述</span><br><span class="line">      desc: db.RegExp(&#123;</span><br><span class="line">        regexp: searchKey,</span><br><span class="line">        options: &#39;i&#39;,</span><br><span class="line">      &#125;),</span><br><span class="line">    &#125;</span><br><span class="line">  ])).get()</span><br><span class="line">  .then(res &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&#39;查询成功&#39;, res)</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(res &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&#39;查询失败&#39;, res)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/06/18/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%BA%91%E5%BC%80%E5%8F%91%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%90%8C%E6%97%B6%E6%90%9C%E7%B4%A2%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5/" data-id="ckmadojiq0002loux0rtn3j75" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-小程序订阅消息" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Jin-longwu/2020/05/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF/" class="article-date">
+  <time datetime="2020-05-25T02:03:14.000Z" itemprop="datePublished">2020-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Jin-longwu/2020/05/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF/">小程序订阅消息</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>小程序给用户推送消息原有方式是采用模板消息，用户通过表单生成formId来给推送消息，但小程序模板消息接口已于2020年1月10日下线，开发者可以使用另一种方式给用户推送消息：订阅消息。</p>
+<h2 id="请确认调试基础库的版本"><a href="#请确认调试基础库的版本" class="headerlink" title="请确认调试基础库的版本"></a>请确认调试基础库的版本</h2><p>建议使用V2.8.2及以后版本<br><img src="http://img1.sycdn.imooc.com/5e891b9400016c7515920692.png" alt="图片描述"></p>
+<h2 id="配置订阅消息模板"><a href="#配置订阅消息模板" class="headerlink" title="配置订阅消息模板"></a>配置订阅消息模板</h2><p>首先确认确认当前小程序的id和登录的公众平台是不是同一个，因为之前经常有同学具有多个公众平台账号，有可能是多个账号会弄混导致模板消息发送失败。</p>
+<p>在公众平台中配置模板消息，选择左边订阅消息菜单，然后点击右边添加按钮，根据自己需求选择消息模板<br><img src="http://img1.sycdn.imooc.com/5e891cb70001ceea24641308.png" alt="图片描述"></p>
+<h2 id="调起小程序订阅消息界面获取下发权限"><a href="#调起小程序订阅消息界面获取下发权限" class="headerlink" title="调起小程序订阅消息界面获取下发权限"></a>调起小程序订阅消息界面获取下发权限</h2><p>复制消息模板对应的模板ID，然后在小程序端调起订阅消息界面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">const templateId &#x3D; &#39;xxxxxx&#39;</span><br><span class="line">wx.requestSubscribeMessage(&#123;</span><br><span class="line">    tmplIds: [templateId],</span><br><span class="line">    success(res) &#123;</span><br><span class="line">        if (res[templateId] &#x3D;&#x3D; &#39;accept&#39;) &#123;</span><br><span class="line">            &#x2F;&#x2F;用户同意了订阅，允许订阅消息</span><br><span class="line">            wx.showToast(&#123;</span><br><span class="line">	            title: &#39;订阅成功&#39;</span><br><span class="line">            &#125;)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">            &#x2F;&#x2F;用户拒绝了订阅，禁用订阅消息</span><br><span class="line">            wx.showToast(&#123;</span><br><span class="line">	            title: &#39;订阅失败&#39;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    fail(err) &#123;</span><br><span class="line">    console.error(err)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="云函数端下发订阅消息"><a href="#云函数端下发订阅消息" class="headerlink" title="云函数端下发订阅消息"></a>云函数端下发订阅消息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">   const wxContext &#x3D; cloud.getWXContext()</span><br><span class="line">   const templateId &#x3D; &#39;xxxxxx</span><br><span class="line"></span><br><span class="line">   return await cloud.openapi.subscribeMessage.send(&#123;</span><br><span class="line">     touser: wxContext.OPENID,</span><br><span class="line">     page: &#39;page&#x2F;index&#x2F;index&#39;,</span><br><span class="line">     lang: &#39;zh_CN&#39;,</span><br><span class="line">     data: &#123;</span><br><span class="line">       phrase1: &#123;</span><br><span class="line">         value: &#39;上课啦&#39;</span><br><span class="line">       &#125;,</span><br><span class="line">       thing2: &#123;</span><br><span class="line">         value: &#39;小程序开发&#39;</span><br><span class="line">       &#125;,</span><br><span class="line">       thing3: &#123;</span><br><span class="line">         value: &#39;订阅消息&#39;</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     templateId: templateId,</span><br><span class="line">     miniprogramState: &#39;developer&#39;</span><br><span class="line">   &#125;)</span><br><span class="line">   console.log(result)</span><br><span class="line">   return result</span><br><span class="line"> &#125; catch (err) &#123;</span><br><span class="line">   console.log(err)</span><br><span class="line">   return err</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置订阅消息权限"><a href="#设置订阅消息权限" class="headerlink" title="设置订阅消息权限"></a>设置订阅消息权限</h2><p>在当前云函数下面，新建config.json文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;permissions&quot;: &#123;</span><br><span class="line">    &quot;openapi&quot;: [</span><br><span class="line">      &quot;subscribeMessage.send&quot;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>测试订阅消息需要在真机上测试，开发工具不能测试。<br>点击真机调试，用手机扫描二维码可以测试。<br>发送完消息以后，在微信页面的服务通知内，就能够看到推送的消息了。</p>
+<h2 id="代码参考"><a href="#代码参考" class="headerlink" title="代码参考"></a>代码参考</h2><p><a target="_blank" rel="noopener" href="https://github.com/xiecheng328/subscribeMessage">https://github.com/xiecheng328/subscribeMessage</a></p>
+<h2 id="小程序开发学习建议"><a href="#小程序开发学习建议" class="headerlink" title="小程序开发学习建议"></a>小程序开发学习建议</h2><ul>
+<li><p>多看<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/">官方文档</a>，小程序的官方文档写的非常的全面，涵盖了微信小程序开发的所有知识点，大家一定要多看微信小程序官方文档</p>
+</li>
+<li><p>多逛小程序<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/develop/question">开发社区</a>，关于微信小程序的新功能以及更新内容都会在社区上面通知，大家遇到技术问题也可以在上面提问，会有微信团队官方工程师帮助我们解答</p>
+</li>
+<li><p>多敲代码，多练习。只有自己不断的练习才能真正的得到提高</p>
+</li>
+<li><p>分析问题和解决问题的能力。这是需要时间不断积累的，在遇到问题的时候，一定要多思考，对于有错误信息的问题一定要认真翻译错误信息，大多数的错误线索都能够被找到</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/05/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF/" data-id="ckmadojir0003loux0lktfu0j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-抄笔记：尤雨溪在Vue3-0-Beta直播里聊到了这些…" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Jin-longwu/2020/04/22/%E6%8A%84%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B0%A4%E9%9B%A8%E6%BA%AA%E5%9C%A8Vue3-0-Beta%E7%9B%B4%E6%92%AD%E9%87%8C%E8%81%8A%E5%88%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E2%80%A6/" class="article-date">
+  <time datetime="2020-04-22T02:39:21.000Z" itemprop="datePublished">2020-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Jin-longwu/2020/04/22/%E6%8A%84%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B0%A4%E9%9B%A8%E6%BA%AA%E5%9C%A8Vue3-0-Beta%E7%9B%B4%E6%92%AD%E9%87%8C%E8%81%8A%E5%88%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E2%80%A6/">抄笔记：尤雨溪在Vue3.0 Beta直播里聊到了这些…</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 4 月 21 日晚，Vue 作者尤雨溪在哔哩哔哩直播分享了<code>Vue.js 3.0 Beta</code>最新进展。</p>
+<h2 id="1-全新文档RFCs"><a href="#1-全新文档RFCs" class="headerlink" title="1. 全新文档RFCs"></a>1. 全新文档<code>RFCs</code></h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zqzd824j31i70u0gpm.jpg" alt="img"></p>
+<p><code>Vue.js 3.0 Beta</code>发布后的工作重点是保证稳定性和推进各类库集成</p>
+<p>所有的进度和文档都将在全新<code>RFCs</code>文档可以看到。</p>
+<h2 id="2-六大亮点"><a href="#2-六大亮点" class="headerlink" title="2. 六大亮点"></a>2. 六大亮点</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zd5pgiij31h80u00wy.jpg" alt="img"></p>
+<ul>
+<li><code>Performance</code>：性能更比<code>Vue 2.0</code>强。</li>
+<li><code>Tree shaking support</code>：可以将无用模块“剪辑”，仅打包需要的。</li>
+<li><code>Composition API</code>：组合<code>API</code></li>
+<li><code>Fragment, Teleport, Suspense</code>：“碎片”，<code>Teleport</code>即<code>Protal传送门</code>，“悬念”</li>
+<li><code>Better TypeScript support</code>：更优秀的 Ts 支持</li>
+<li><code>Custom Renderer API</code>：暴露了自定义渲染<code>API</code></li>
+</ul>
+<p>下面将按顺序分别描述。</p>
+<h2 id="3-Performance"><a href="#3-Performance" class="headerlink" title="3.Performance"></a>3.<code>Performance</code></h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zd63pq4j315a0iggp1.jpg" alt="img"></p>
+<ol>
+<li>重写了虚拟<code>Dom</code>的实现（且保证了兼容性，脱离模版的渲染需求旺盛）。</li>
+<li>编译模板的优化。</li>
+<li>更高效的组件初始化。</li>
+<li><code>update</code>性能提高 1.3~2 倍。</li>
+<li><code>SSR</code>速度提高了 2~3 倍。</li>
+</ol>
+<p>下面是各项性能对比</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdapyzwj31hk0u04dz.jpg" alt="img"></p>
+<h3 id="要点-1：编译模板的优化"><a href="#要点-1：编译模板的优化" class="headerlink" title="要点 1：编译模板的优化"></a>要点 1：编译模板的优化</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge22bv37dhj31k60ladks.jpg" alt="img"></p>
+<p>假设要编译以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;span&#x2F;&gt;</span><br><span class="line">  &lt;span&gt;&#123;&#123; msg &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>将会被编译成以下模样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createVNode as _createVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createBlock as _createBlock &#125; from &quot;vue&quot;</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, null, &quot;static&quot;),</span><br><span class="line">    _createVNode(&quot;span&quot;, null, _toDisplayString(_ctx.msg), 1 &#x2F;* TEXT *&#x2F;)</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Check the console for the AST</span><br></pre></td></tr></table></figure>
+
+<p>注意看第二个<code>_createVNode</code>结尾的“1”：</p>
+<p>Vue 在运行时会生成<code>number</code>（大于 0）值的<code>PatchFlag</code>，用作标记。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge22byzcwaj31k80s011q.jpg" alt="img"><br>仅带有<code>PatchFlag</code>标记的节点会被真正追踪，且<strong>无论层级嵌套多深，它的动态节点都直接与<code>Block</code>根节点绑定，无需再去遍历静态节点</strong></p>
+<p>再看以下例子：</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge22c2abk2j31kg0o4n30.jpg" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;span&gt;static&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;span :id&#x3D;&quot;hello&quot; class&#x3D;&quot;bar&quot;&gt;&#123;&#123; msg &#125;&#125;   &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>会被编译成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createVNode as _createVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createBlock as _createBlock &#125; from &quot;vue&quot;</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, null, &quot;static&quot;),</span><br><span class="line">    _createVNode(&quot;span&quot;, &#123;</span><br><span class="line">      id: _ctx.hello,</span><br><span class="line">      class: &quot;bar&quot;</span><br><span class="line">    &#125;, _toDisplayString(_ctx.msg), 9 &#x2F;* TEXT, PROPS *&#x2F;, [&quot;id&quot;])</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br><span class="line">PatchFlag&#96; 变成了&#96;9 &#x2F;* TEXT, PROPS *&#x2F;, [&quot;id&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>它会告知我们不光有<code>TEXT</code>变化，还有<code>PROPS</code>变化（id）</p>
+<p>这样既跳出了<code>virtual dom</code>性能的瓶颈，又保留了可以手写<code>render</code>的灵活性。<br>等于是：既有<code>react</code>的灵活性，又有基于模板的性能保证。</p>
+<h3 id="要点-2-事件监听缓存：cacheHandlers"><a href="#要点-2-事件监听缓存：cacheHandlers" class="headerlink" title="要点 2: 事件监听缓存：cacheHandlers"></a>要点 2: 事件监听缓存：<code>cacheHandlers</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge22c6ayicj31kg0k8q7w.jpg" alt="img"><br>假设我们要绑定一个事件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;span @click&#x3D;&quot;onClick&quot;&gt;</span><br><span class="line">    &#123;&#123;msg&#125;&#125;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>关闭<code>cacheHandlers</code>后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; toDisplayString as _toDisplayString, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock &#125; from &quot;vue&quot;</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, &#123; onClick: _ctx.onClick &#125;, _toDisplayString(_ctx.msg), 9 &#x2F;* TEXT, PROPS *&#x2F;, [&quot;onClick&quot;])</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>onClick</code>会被视为<code>PROPS</code>动态绑定，后续替换点击事件时需要进行更新。</p>
+<p>开启<code>cacheHandlers</code>后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123; toDisplayString as _toDisplayString, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock &#125; from &quot;vue&quot;</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, &#123;</span><br><span class="line">      onClick: _cache[1] || (_cache[1] &#x3D; $event &#x3D;&gt; (_ctx.onClick($event)))</span><br><span class="line">    &#125;, _toDisplayString(_ctx.msg), 1 &#x2F;* TEXT *&#x2F;)</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>cache[1]</code>，会自动生成并缓存一个内联函数，“神奇”的变为一个静态节点。<br>Ps：相当于<code>React</code>中<code>useCallback</code>自动化。</p>
+<p>并且支持手写内联函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;span @click&#x3D;&quot;()&#x3D;&gt;foo()&quot;&gt;</span><br><span class="line">    &#123;&#123;msg&#125;&#125;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-Tree-shaking-support"><a href="#4-Tree-shaking-support" class="headerlink" title="4. Tree shaking support"></a>4. <code>Tree shaking support</code></h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zsevggvj31he0u0afk.jpg" alt="img"></p>
+<ul>
+<li>可以将无用模块“剪辑”，仅打包需要的（比如<code>v-model,&lt;transition&gt;</code>，用不到就不会打包）。</li>
+<li>一个简单“<code>HelloWorld</code>”大小仅为：13.5kb<ul>
+<li>11.75kb，仅<code>Composition API</code>。</li>
+</ul>
+</li>
+<li>包含运行时完整功能：22.5kb<ul>
+<li>拥有更多的功能，却比<code>Vue 2</code>更迷你。</li>
+</ul>
+</li>
+</ul>
+<p>很多时候，我们并不需要 <code>vue</code>提供的所有功能，在 <code>vue 2</code> 并没有方式排除掉，但是 3.0 都可能做成了按需引入。</p>
+<h2 id="5-Composition-API"><a href="#5-Composition-API" class="headerlink" title="5. Composition API"></a>5. <code>Composition API</code></h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zddq3e4j31h80u0gqs.jpg" alt="img"><br>与<code>React Hooks</code> 类似的东西，实现方式不同。</p>
+<ul>
+<li>可与现有的 <code>Options API</code>一起使用</li>
+<li>灵活的逻辑组合与复用</li>
+<li><code>vue 3</code>的响应式模块可以和其他框架搭配使用</li>
+</ul>
+<p>混入(<code>mixin</code>) 将不再作为推荐使用， <code>Composition API</code>可以实现更灵活且无副作用的复用代码。</p>
+<p>感兴趣的可以查看：<a target="_blank" rel="noopener" href="https://composition-api.vuejs.org/#summary">https://composition-api.vuejs.org/#summary</a><br><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zt3s5sqj31po0u0e81.jpg" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Composition API&#96;包含了六个主要&#96;API</span><br></pre></td></tr></table></figure>
+
+<p>可以到这里查看：<a target="_blank" rel="noopener" href="https://composition-api.vuejs.org/api.html#setup">https://composition-api.vuejs.org/api.html#setup</a></p>
+<p>Ps：其它的均为常见的工具函数，可先忽略不看。</p>
+<h2 id="6-Fragment"><a href="#6-Fragment" class="headerlink" title="6. Fragment"></a>6. <code>Fragment</code></h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdhu123j31he0u0whx.jpg" alt="img"></p>
+<p><code>Fragment</code>翻译为：“碎片”</p>
+<ul>
+<li>不再限于模板中的单个根节点</li>
+<li><code>render</code> 函数也可以返回数组了，类似实现了 <code>React.Fragments</code> 的功能 。</li>
+<li>‘<code>Just works</code>’</li>
+</ul>
+<h3 id="6-1-lt-Teleport-gt"><a href="#6-1-lt-Teleport-gt" class="headerlink" title="6.1 &lt;Teleport&gt;"></a>6.1 <code>&lt;Teleport&gt;</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdlt1nhj31hb0u0gp6.jpg" alt="img"></p>
+<ul>
+<li>以前称为<code>&lt;Portal&gt;</code>，译作传送门。</li>
+<li>更多细节将由@Linusborg 分享</li>
+</ul>
+<p><code>&lt;Teleport&gt;</code>原先是对标 <code>React Portal</code>（增加多个新功能，更强）</p>
+<p><strong>但因为<code>Chrome</code>有个提案，会增加一个名为<code>Portal</code>的原生<code>element</code>，为避免命名冲突，改为<code>Teleport</code></strong></p>
+<h3 id="6-2-lt-Suspense-gt"><a href="#6-2-lt-Suspense-gt" class="headerlink" title="6.2 &lt;Suspense&gt;"></a>6.2 <code>&lt;Suspense&gt;</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdpfkktj31he0u00xj.jpg" alt="img"></p>
+<p><code>Suspense</code>翻译为：“悬念”</p>
+<ul>
+<li>可在嵌套层级中等待嵌套的异步依赖项</li>
+<li>支持<code>async setup()</code></li>
+<li>支持异步组件</li>
+</ul>
+<p>虽然<code>React 16</code>引入了<code>Suspense</code>，但直至现在都不太能用。如何将其与异步数据结合，还没完整设计出来。</p>
+<p>Vue 3 的<code>&lt;Suspense&gt;</code>更加轻量：</p>
+<p><strong>仅 5%应用能感知运行时的调度差异，综合考虑下，Vue3 的<code>&lt;Suspense&gt;</code> 没和 React 一样做运行调度处理</strong></p>
+<h2 id="7-更好的TypeScript支持"><a href="#7-更好的TypeScript支持" class="headerlink" title="7. 更好的TypeScript支持"></a>7. 更好的<code>TypeScript</code>支持</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdt5e3sj31he0u046k.jpg" alt="img"></p>
+<ul>
+<li><code>Vue 3</code>是用<code>TypeScript</code>编写的库，可以享受到自动的类型定义提示</li>
+<li><code>JavaScript</code>和<code>TypeScript</code>中的 API 是相同的。<ul>
+<li>事实上，代码也基本相同</li>
+</ul>
+</li>
+<li>支持<code>TSX</code></li>
+<li><code>class</code>组件还会继续支持，但是需要引入<code>vue-class-component@next</code>，该模块目前还处在 alpha 阶段。</li>
+</ul>
+<p>还有<code>Vue 3 + TypeScript</code> 插件正在开发，有类型检查，自动补全等功能。目前进展可喜。<br><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdxzy74j31hc0u010p.jpg" alt="img"></p>
+<h2 id="8-Custom-Renderer-API：自定义渲染器-API"><a href="#8-Custom-Renderer-API：自定义渲染器-API" class="headerlink" title="8. Custom Renderer API：自定义渲染器 API"></a>8. <code>Custom Renderer API</code>：自定义渲染器 API</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdz8r6hj31he0u0q9f.jpg" alt="img"></p>
+<ul>
+<li>正在进行<code>NativeScript Vue</code>集成</li>
+<li>用户可以尝试<code>WebGL</code>自定义渲染器，与普通 Vue 应用程序一起使用（<code>Vugel</code>）。</li>
+</ul>
+<p>意味着以后可以通过 <code>vue</code>， <code>Dom</code> 编程的方式来进行 <code>webgl</code> 编程 。感兴趣可以看这里：<a target="_blank" rel="noopener" href="https://vugel.planning.nl/#application">Getting started vugel</a></p>
+<h2 id="9-剩余工作"><a href="#9-剩余工作" class="headerlink" title="9. 剩余工作"></a>9. 剩余工作</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1ze8h3fgj31ha0u0gpv.jpg" alt="img"></p>
+<h3 id="9-1-Docs-amp-Migration-Guides"><a href="#9-1-Docs-amp-Migration-Guides" class="headerlink" title="9.1 Docs &amp; Migration Guides"></a>9.1 <code>Docs &amp; Migration Guides</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zeab0qdj31hm0u045x.jpg" alt="img"></p>
+<ul>
+<li>新的文档编写交由<code>@NataliaTepluhina, @sdras, @bencodezen &amp; @phanan</code> 负责</li>
+<li><code>@sdras</code> 正在做自动升级迁移工具</li>
+<li><code>@sodatea</code> 已经开始研究<code>CodeMods</code></li>
+</ul>
+<h3 id="9-2-Router"><a href="#9-2-Router" class="headerlink" title="9.2 Router"></a>9.2 <code>Router</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zeejh3sj31hl0u0whv.jpg" alt="img"></p>
+<ul>
+<li>下一代 <code>Router</code>：<code>vue-router@next</code>已在<code>alpha</code>阶段，感谢<code>@posva</code></li>
+</ul>
+<p>有部分的<code>API</code>变动，可到<code>RFC</code>上看。</p>
+<h3 id="9-3-Vuex"><a href="#9-3-Vuex" class="headerlink" title="9.3 Vuex"></a>9.3 <code>Vuex</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zej91d2j31hg0u0n31.jpg" alt="img">`</p>
+<ul>
+<li>下一代<code>Vuex</code>：，<code>vuex@next</code>（与<code>Vue 3 compat</code>相同的 API），已在<code>alpha</code>阶段，感谢<code>@KiaKing</code>。</li>
+<li>团队正在为下一次迭代试验<code>Vuex API</code>的简化</li>
+</ul>
+<p>目前以兼容<code>Vue 3</code>为主，基本上没有<code>API</code>变动，莫慌。</p>
+<h3 id="9-4-CLI"><a href="#9-4-CLI" class="headerlink" title="9.4 CLI"></a>9.4 <code>CLI</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zemntztj31h80u0wja.jpg" alt="img"></p>
+<ul>
+<li><code>CLI</code>插件：<code>vue-cli-plugin-vue-next</code>by <code>@sodatea</code></li>
+<li>（wip）<code>CodeMods</code>支持升级<code>Vue 2</code>应用</li>
+</ul>
+<h3 id="9-5-新工具：vite（法语-“快”）"><a href="#9-5-新工具：vite（法语-“快”）" class="headerlink" title="9.5 新工具：vite（法语 “快”）"></a>9.5 新工具：<code>vite</code>（法语 “快”）</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zeqxdv0j31h20u0n12.jpg" alt="img"><br>地址：<a target="_blank" rel="noopener" href="https://github.com/vuejs/vite">https://github.com/vuejs/vite</a></p>
+<p>一个简易的<code>http</code>服务器，无需<code>webpack</code>编译打包，根据请求的<code>Vue</code>文件，直接发回渲染，且支持热更新（非常快）</p>
+<h3 id="9-6-vue-test-utils"><a href="#9-6-vue-test-utils" class="headerlink" title="9.6 vue-test-utils"></a>9.6 <code>vue-test-utils</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zeu7cqcj31hg0u00xc.jpg" alt="img"></p>
+<ul>
+<li>下一代<code>test-utils</code>:<code>test-utils@next</code><ul>
+<li>by <code>@lmiller1990, @dobromir-hristov, @afontcu &amp; @JessicaSachs</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="9-7-DevTools"><a href="#9-7-DevTools" class="headerlink" title="9.7 DevTools"></a>9.7 <code>DevTools</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zexzr4xj31hg0u0gpx.jpg" alt="img"></p>
+<ul>
+<li>早期的原型已经由@Akryum 完成，当我们到<code>beta</code>时，将完全集成。</li>
+</ul>
+<p>目前需要花更多精力去完善。</p>
+<h3 id="9-8-IDE-Support-Vetur"><a href="#9-8-IDE-Support-Vetur" class="headerlink" title="9.8 IDE Support (Vetur)"></a>9.8 <code>IDE Support (Vetur)</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zf1owoqj31hm0u0wjz.jpg" alt="img"></p>
+<ul>
+<li><code>@znck</code>目前正在试验模板的类型检查</li>
+<li><code>@octref</code>将在 5 月为<code>Vue 3</code>进行<code>Vetur</code>集成</li>
+</ul>
+<h3 id="9-9-Nuxt"><a href="#9-9-Nuxt" class="headerlink" title="9.9 Nuxt"></a>9.9 <code>Nuxt</code></h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zf302shj31ha0u0dkc.jpg" alt="img"></p>
+<p>目前<code>Nuxt</code>的整合工作也正在进行中，内部团队已经跑起来了。还需要时间磨合</p>
+<h2 id="10-Vue-2-x还有-2-7-版本"><a href="#10-Vue-2-x还有-2-7-版本" class="headerlink" title="10 Vue 2.x还有 2.7 版本"></a>10 <code>Vue 2.x</code>还有 2.7 版本</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zf6uj2oj31ho0u0agc.jpg" alt="img"></p>
+<ul>
+<li>将有最后一个小版本（2.7）</li>
+<li>从<code>Vue 3</code>向后移植兼容的改进(不损坏兼容性前提下)</li>
+<li>加上在<code>Vue 3</code>中删除的功能的弃用警告</li>
+<li><code>LTS1</code> 18 个月。</li>
+</ul>
+<p>最后建议：<code>Vue 3</code>虽好，如果你的项目很稳定，且对新功能无过多的要求或者迁移成本过高，则不建议升级。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>花了一宿反复回放整理出来的，如有错误，尽情谅解。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zij5j87j31hj0u0q4u.jpg" alt="img"></p>
+<p>附：<strong>直播中用到的渲染模板查看工具地址</strong>：<a target="_blank" rel="noopener" href="https://vue-next-template-explorer.netlify.app/">https://vue-next-template-explorer.netlify.app/</a><br><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zilibhuj31kg0oc0xi.jpg" alt="img"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/22/%E6%8A%84%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B0%A4%E9%9B%A8%E6%BA%AA%E5%9C%A8Vue3-0-Beta%E7%9B%B4%E6%92%AD%E9%87%8C%E8%81%8A%E5%88%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E2%80%A6/" data-id="ckmadojiy0005loux8seygrvt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-微信小程序云开发" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Jin-longwu/2020/04/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91/" class="article-date">
+  <time datetime="2020-04-12T01:28:32.000Z" itemprop="datePublished">2020-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Jin-longwu/2020/04/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91/">微信小程序云开发</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://coding.imooc.com/class/373.html?mc_marking=3f121027165fd34665da18b6d071da9c&mc_channel=shouji">微信小程序开发</a>已经成为目前最火爆的技能之一，无论是在求职、毕设、兴趣培养等方面都已经成为一项必备技能，而小程序云开发技术的出现更是点燃了整个小程序生态圈。<br>在2019微信公开课PRO小程序分论坛上，腾讯云宣布推出总价值超过10 亿元的“小程序·云开发”资源扶持计划，对超过一百万个小程序开发者提供免费资源扶持，全面助力开发者通过云开发打造优秀的微信小程序。这是继与微信团队联合推出降低开发门槛的“小程序·云开发”产品后，腾讯云在小程序开发成本上再次面向开发者释放红利。<br>那么什么是小程序云开发呢？我们通过对比云开发模式与传统开发模式之间的区别，来解释什么是小程序的云开发。</p>
+<h3 id="小程序云开发与传统开发模式区别？"><a href="#小程序云开发与传统开发模式区别？" class="headerlink" title="小程序云开发与传统开发模式区别？"></a>小程序云开发与传统开发模式区别？</h3><h4 id="小程序传统开发模式"><a href="#小程序传统开发模式" class="headerlink" title="小程序传统开发模式"></a>小程序传统开发模式</h4><p><img src="http://img1.sycdn.imooc.com/5d53a0430001663719581082.png" alt="图片描述"></p>
+<ul>
+<li><p>开发效率低：</p>
+<p>大多数小程序所展示的数据都应该不是在页面上写死的，所以大多数小程序都需要一个服务端，服务端可以用多种技术实现，如PHP、Node.js、Java等。不管使用哪种技术实现服务端，开发一款小程序一般情况下都需要至少配备两个程序员，一个开发小程序前端，一个开发小程序服务端，这样的话这两个程序员之间就需要不断沟通，确认共同遵循的接口。可沟通过程中往往权责不清晰，有很多临界的位置，谁管都可以，容易引发扯皮，沟通成本非常高，导致开发效率下降。同时，由于开发人员的增多，整个开发的成本也会提高。这也是困扰着很多创业型公司的问题。</p>
+</li>
+<li><p>维护成本高：</p>
+<p>项目上线的时候，公司需要自己搭建服务，不仅要花大价钱买机器、买宽带流量，还得请专门的人员去维护。运维人员需要考虑比如数据库运维，文件存储、内容加速、网络防护、容器服务、负载均衡、安全加固等等一系列的问题，这在公司里面是很头疼的一件事。</p>
+</li>
+</ul>
+<h3 id="小程序云开发模式"><a href="#小程序云开发模式" class="headerlink" title="小程序云开发模式"></a>小程序云开发模式</h3><p>小程序云开发是腾讯云和微信团队联合开发的，集成于小程序控制台的原生 Serverless 云服务，为开发者提供完整的原生云端支持和微信服务支持，弱化后端和运维概念，无需搭建服务器，使用平台提供的 API 进行核心业务开发，即可实现快速上线和迭代。只需要一名开发人员就可以完成所有的工作。云开发核心能力包括：云存储、云数据库、云函数、云调用、HTTP API。<img src="http://img1.sycdn.imooc.com/5d53a08f0001187e16561090.png" alt="图片描述"></p>
+<h3 id="区别对比"><a href="#区别对比" class="headerlink" title="区别对比"></a>区别对比</h3><p>传统开发模式</p>
+<ul>
+<li>开发效率低：过多的非业务逻辑需要处理，导致开发效率难以提升</li>
+<li>资源投入高：无论是物理机托管，还是云主机维护，都需要较多的人力物力投入</li>
+<li>产品上线慢：前后端联调、资源存储、部署等操作繁杂，上线流程耗时长</li>
+<li>日常运维难：需时刻关注环境运行状况，管理相关资源，运维难度大</li>
+</ul>
+<p>云开发模式</p>
+<ul>
+<li>高效开发：只需编写核心逻辑代码，内建小程序用户鉴权，无需关注后端配置与部署，专注于业务开发</li>
+<li>节约成本：按请求数和资源的运行收费，极大节约时间和成本，提供一定量免费额度使用</li>
+<li>官方生态：原生集成微信SDK，云相关API开箱即用；同时，通过云调用，可免鉴权直接调用微信开放接口</li>
+<li>稳定可靠：底层资源由腾讯云提供专业支持，满足不同业务场景和需求，具备快速拓展能力，确保服务稳定，数据安全</li>
+</ul>
+<h3 id="前端热词Serverless"><a href="#前端热词Serverless" class="headerlink" title="前端热词Serverless"></a>前端热词Serverless</h3><p>​    在2019年，前端有一个很火的热词，叫做Serverless，server就是服务，less更少的，翻译过来就是无服务开发，而小程序云开发是这种无服务的开发。举个更形象的例子，比如我们想开一场演唱会，之前的做法是需要自己联系场地、灯光、伴奏，而有了云开发以后，相当于是演唱会需要的所有东西都有人帮我们准备好了，我们只需要站在舞台上演唱就可以。<br>   Serverless中有一个概念，叫做 函数即服务，我们在使用云开发来实现小程序后端服务的时候，可以直接调用函数即可，对前端来说，后端服务就是一个函数，整个小程序的前后端逻辑都能在一个IDE里面完成，用户其实完全不用担心到底哪些是服务器的逻辑，后端服务和前端完全的融合在一种代码体系里去了，这样后端的服务即是一个函数，至于这个函数是在前端实现，或者是在后端很远的地方实现，开发者都可以不用关心。所以说，severless打破了物理隔离。开发者不再去做任何隔离中间层的事前，我只需要关心函数的实现就可以了。<br>   所以这种开发模式可以实现真正的全栈技术开发，这对现有的开发模式是一个很大的革新。</p>
+<h3 id="小程序云开发优势"><a href="#小程序云开发优势" class="headerlink" title="小程序云开发优势"></a>小程序云开发优势</h3><ul>
+<li>快速上线项目：快速上线对于公司是非常必要的。很多公司可能已经具备了自己的网站或者APP，但现在小程序如此火爆所以想开发一款小程序，那么小程序·云开发可以帮助你在最短时间上线应用，完成快速试错</li>
+<li>专注核心业务，放弃非核心逻辑：使用云开发以后，你只需编写最重要的“核心代码”，不再需要关心周边组件，极大地降低了服务架构搭建的复杂性，成本更低</li>
+<li>你可以独自完成一个小程序的设计、开发、发布：在传统的开发模式下，你需要一个后端开发者来配合你完成整个小程序的开发。在小程序·云开发中，你只需要借助云开发提供的丰富的 API ，就可以实现数据的存储、文件的上传、结果的计算，大大的提升了工作的效率</li>
+<li>你无需学习一门新的语言：小程序·云开发目前支持 Node.js ，和进行小程序开发时使用的 JavaScript 同出一门，你可以以更低的学习成本来完成小程序的开发</li>
+<li>你无需关注系统运维：当应用上线后，运维就成为了一个大的问题，当海量流量来袭时，如何快速调整系统容量，确保业务的稳步运行就成为了一个问题。当你使用云开发后，云开发将为你接管运维层面的事务，让你更加关注应用本身</li>
+<li>弹性伸缩：在传统的单体开发模式中，应用需要以应用、站点为单位进行伸缩，因为我们的开发是基于整个应用、整个站点进行开发，无法单独对某一个特定的功能进行伸缩。而云开发所采用的 Serverless 方案中的运算部分，是交给云函数来进行处理的，你的应用由一个个函数组成的，因此，在弹性伸缩方面，粒度进一步细化，针对特定功能的函数来进行伸缩，弹性效率更高，能够承载的请求量更大</li>
+<li>数据安全：在云开发模式下，每个用户的环境资源是独立的，也即是私有的，并且云开发提供与自有数据库打通的能力。这样，用户的数据都存在用户自己的云开发环境资源下面，一定层面保障了用户的数据安全与稳定性</li>
+</ul>
+<h3 id="开通云开发"><a href="#开通云开发" class="headerlink" title="开通云开发"></a>开通云开发</h3><ol>
+<li>下载微信开发者工具并安装：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">下载地址</a></li>
+<li>新建项目，后端服务选择小程序云开发<img src="http://img1.sycdn.imooc.com/5d53a2ce0001bc2409360636.png" alt="图片描述"></li>
+<li>新建项目后，点击开发工具上方云开发按钮!<img src="http://img1.sycdn.imooc.com/5d53a30c0001297609380117.png" alt="图片描述"></li>
+<li>点击开通按钮<img src="http://img1.sycdn.imooc.com/5d53a395000161bd09380569.png" alt="图片描述"></li>
+<li>填入环境名称，图中的基础配额完全都是免费的<img src="http://img1.sycdn.imooc.com/5d53a3b20001433809300603.png" alt="图片描述"></li>
+<li>点击确定，开通云开发<img src="http://img1.sycdn.imooc.com/5d53a3e30001410309250562.png" alt="图片描述"></li>
+<li>开通以后，官方给出从时间是十分钟左右就可以开通成功，实际测试其实很快</li>
+</ol>
+<h3 id="云开发提供的五大能力"><a href="#云开发提供的五大能力" class="headerlink" title="云开发提供的五大能力"></a>云开发提供的五大能力</h3><h4 id="1-云函数"><a href="#1-云函数" class="headerlink" title="1.云函数"></a>1.云函数</h4><p>一段运行在云端的代码，无需管理服务器，在开发工具内编写、一键上传部署即可运行后端代码。<br>小程序内提供了专门用于云函数调用的 API。开发者可以在云函数内获取到每次调用的上下文（appid、openid 等），无需维护复杂的鉴权机制，即可获取天然可信任的用户登录态（openid）。<br>开放了运用 Node.js 等框架编写“后端”业务逻辑后，直接可以部署在云平台下，完全不需要去考虑域名、服务器、打包发布、运维等等琐事</p>
+<h4 id="2-云数据库"><a href="#2-云数据库" class="headerlink" title="2.云数据库"></a>2.云数据库</h4><p>云开发提供了一个 JSON 数据库，顾名思义，数据库中的每条记录都是一个 JSON 格式的对象。一个数据库可以有多个集合（相当于关系型数据中的表），集合可看做一个 JSON 数组，数组中的每个对象就是一条记录，记录的格式是 JSON 对象。<br>这样的话，数据库的存储也不用考虑了，直接提供了一个类似于 MongoDB一样的数据库，而且免费的存储空间达到了 2G，一般的项目足够使用了</p>
+<h4 id="3-云存储"><a href="#3-云存储" class="headerlink" title="3.云存储"></a>3.云存储</h4><p>云开发提供了一块文件存储空间，提供了上传文件到云端、带权限管理的云端下载能力，开发者可以在小程序端和云函数端通过 API 使用云文件存储功能。<br>在小程序端可以分别调用 wx.cloud.uploadFile 和 wx.cloud.downloadFile 完成上传和下载云文件操作。<br>这就相当于腾讯直接给你提供了一个静态文件的 CDN，免费的容量直接达到了 5G，一般项目前期是够用的</p>
+<h4 id="4-云调用"><a href="#4-云调用" class="headerlink" title="4.云调用"></a>4.云调用</h4><p>云调用是云开发提供的基于云函数使用小程序开放接口的能力，支持在云函数调用服务端开放接口，如发送模板消息、获取小程序码等操作都可以在云函数中完成</p>
+<h4 id="5-HTTP-API"><a href="#5-HTTP-API" class="headerlink" title="5.HTTP API"></a>5.HTTP API</h4><p>云开发资源也可以通过 HTTP 接口访问，即在小程序外访问。比如你的小程序项目，需要做一个后台管理系统对小程序中的数据和文件进行管理，就可以使用HTTP API来访问云开发当中的资源</p>
+<h3 id="小程序开发适合人群"><a href="#小程序开发适合人群" class="headerlink" title="小程序开发适合人群"></a>小程序开发适合人群</h3><ul>
+<li>打算进入职场，从事前端开发甚至是全栈开发的职场小白</li>
+<li>已经有了一定的前端工作经验，但由于公司业务需要，打算学习小程序开发的技能党</li>
+<li>正在做毕业设计并且想做出精品高质量毕设项目的学生党</li>
+<li>看到小程序开发如此火爆，打算一起尝鲜的达人</li>
+</ul>
+<h3 id="小程序可发学习建议"><a href="#小程序可发学习建议" class="headerlink" title="小程序可发学习建议"></a>小程序可发学习建议</h3><ul>
+<li>多看<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/">官方文档</a>，小程序的官方文档写的非常的全面，涵盖了微信小程序开发的所有知识点，大家一定要多看微信小程序官方文档</li>
+<li>多逛小程序<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/develop/question">开发社区</a>，关于微信小程序的新功能以及更新内容都会在社区上面通知，大家遇到技术问题也可以在上面提问，会有微信团队官方工程师帮助我们解答</li>
+<li>多敲代码，多练习。只有自己不断的练习才能真正的得到提高</li>
+<li>分析问题和解决问题的能力。这是需要时间不断积累的，在遇到问题的时候，一定要多思考，对于有错误信息的问题一定要认真翻译错误信息，大多数的错误线索都能够被找到</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91/" data-id="ckmadojix0004loux4cpbaiib" class="article-share-link">Share</a>
       
       
     </footer>
@@ -131,7 +663,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Jin-longwu/archives/2021/03/">March 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Jin-longwu/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Jin-longwu/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Jin-longwu/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Jin-longwu/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/Jin-longwu/archives/2020/04/">April 2020</a></li></ul>
     </div>
   </div>
 
@@ -144,7 +676,23 @@
       <ul>
         
           <li>
-            <a href="/Jin-longwu/2021/03/15/hello-world/">Hello World</a>
+            <a href="/Jin-longwu/2020/10/11/TypeScript%E5%85%A5%E9%97%A8/">TypeScript入门</a>
+          </li>
+        
+          <li>
+            <a href="/Jin-longwu/2020/09/18/%E4%B8%BA%E4%BB%80%E4%B9%88Vue%E4%B8%AD%E7%9A%84slot%E4%B8%8D%E8%83%BD%E5%BA%94%E7%94%A8v-show%E6%8C%87%E4%BB%A4/">为什么Vue中的slot不能应用v-show指令</a>
+          </li>
+        
+          <li>
+            <a href="/Jin-longwu/2020/06/18/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%BA%91%E5%BC%80%E5%8F%91%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%90%8C%E6%97%B6%E6%90%9C%E7%B4%A2%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5/">小程序搜索功能，云开发搜索，小程序云开发模糊搜索，同时搜索多个字段</a>
+          </li>
+        
+          <li>
+            <a href="/Jin-longwu/2020/05/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF/">小程序订阅消息</a>
+          </li>
+        
+          <li>
+            <a href="/Jin-longwu/2020/04/22/%E6%8A%84%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B0%A4%E9%9B%A8%E6%BA%AA%E5%9C%A8Vue3-0-Beta%E7%9B%B4%E6%92%AD%E9%87%8C%E8%81%8A%E5%88%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E2%80%A6/">抄笔记：尤雨溪在Vue3.0 Beta直播里聊到了这些…</a>
           </li>
         
       </ul>
